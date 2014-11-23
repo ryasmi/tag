@@ -1,0 +1,11 @@
+{
+  "name": "tag",
+  "homepage": "https://github.com/ryansmith94/tag",
+  "main": "build/tag.js",
+  "moduleType": [
+    "amd",
+    "commonjs"
+  ],
+  "license": "Creative Commons",
+  "ignore": ["./!(build)"]
+}
