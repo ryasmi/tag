@@ -6,7 +6,7 @@
 [![Dev Dependencies](https://david-dm.org/ryansmith94/tag/dev-status.svg?style=flat)](/package.json)
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ryansmith94/tag?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-If you have a bug, enhancement, or question you can post it in the issues, however, please see the [contributing.md](/contributing.md) file before doing so. You may also ask questions and chat on [Gitter](https://gitter.im/ryansmith94/tag).
+If you have a bug, enhancement, or question you can post it in the issues, however, please see the [contribution guidelines](/contributing.md) before doing so. You may also ask questions and chat on [Gitter](https://gitter.im/ryansmith94/tag).
 
 ## Users
 Documentation can be found in the [docs](/docs) directory. Please see below for instructions on how to [download](#download) and [use](#use) tag.
@@ -43,4 +43,4 @@ You may contribute to this project via issues and pull requests, however, please
 - [docs](/docs) - Documentation written in GitHub Markdown.
 
 ### Build Process
-You should try to ensure that [`gulp` or `npm test`](http://gulpjs.com/) run without any errors before submitting a pull request`.
+You should try to ensure that [`gulp` or `npm test`](http://gulpjs.com/) run without any errors before submitting a pull request.
