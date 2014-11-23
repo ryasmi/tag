@@ -24,7 +24,7 @@ Please follow any of the instructions below to download tag.
 - [Global](http://www.w3schools.com/js/js_scope.asp): `var tag = window.tag;`.
 
 ## Developers
-You may contribute to this project via issues and pull requests, however, please see the [contributing.md](/contributing.md) file before doing so.
+You may contribute to this project via issues and pull requests, however, please see the [contribution guidelines](/contributing.md) before doing so.
 
 ### Getting Started
 1. [Fork](/fork) the repository.
