@@ -31,7 +31,7 @@
 
         # Adds content to the element.
         tag.addContent(element, content.map((obj) ->
-          if obj.constructor isnt HTMLDivElement then document.createTextNode(obj)
+          if obj.constructor is String then document.createTextNode(obj)
           else obj
         ))
   )()
