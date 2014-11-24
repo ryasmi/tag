@@ -1,55 +1,57 @@
 var __slice = [].slice;
 
 (function(scope, document, Object, Array) {
-  var tag;
-  tag = (function() {
-    var alias, aliasFn, callList;
-    aliasFn = function(alias) {
-      return function(element, value) {
-        return element[alias] = value;
-      };
+  var alias, aliasFn, callList, tag;
+  aliasFn = function(alias) {
+    return function(element, value) {
+      return element[alias] = value;
     };
-    alias = {
-      'class': aliasFn('className'),
-      'tag-show': function(element, value) {
-        return (element.style = element.style || {}).display = value;
+  };
+  alias = {
+    'class': aliasFn('className'),
+    'tag-show': function(element, value) {
+      return (element.style = element.style || {}).display = value;
+    }
+  };
+  callList = function(list) {
+    return function() {
+      var args;
+      args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
+      return list.map(function(callback) {
+        return callback.apply(null, args);
+      });
+    };
+  };
+  tag = function(tagName) {
+    return tag[tagName] = function(options, content) {
+      var element;
+      if (options == null) {
+        options = {};
       }
-    };
-    callList = function(list) {
-      return function() {
-        var args;
-        args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
-        return list.map(function(callback) {
-          return callback.apply(null, args);
-        });
-      };
-    };
-    return function(tagName) {
-      return tag[tagName] = function(options, content) {
-        var element;
-        if (options == null) {
-          options = {};
+      if (content == null) {
+        content = [];
+      }
+      if ((options != null) && (typeof options !== 'object' || Array.isArray(options))) {
+        content = options || [];
+        options = {};
+      }
+      content = Array.isArray(content) ? content : [content];
+      element = document.createElement(tagName);
+      Object.keys(options).forEach(function(option) {
+        var cbArray, setKey;
+        setKey = alias[option] || aliasFn(option);
+        cbArray = option.indexOf('on') === 0 && options[option].constructor === Array;
+        return setKey(element, cbArray ? callList(options[option]) : options[option]);
+      });
+      return tag.addContent(element, content.map(function(obj) {
+        if (typeof obj !== 'object') {
+          return document.createTextNode(obj);
+        } else {
+          return obj;
         }
-        if (content == null) {
-          content = [];
-        }
-        element = document.createElement(tagName);
-        Object.keys(options).forEach(function(option) {
-          var cbArray, setKey;
-          setKey = alias[option] || aliasFn(option);
-          cbArray = option.indexOf('on') === 0 && options[option].constructor === Array;
-          return setKey(element, cbArray ? callList(options[option]) : options[option]);
-        });
-        return tag.addContent(element, content.map(function(obj) {
-          if (obj.constructor !== HTMLDivElement) {
-            return document.createTextNode(obj);
-          } else {
-            return obj;
-          }
-        }));
-      };
+      }));
     };
-  })();
+  };
   tag.addContent = function(element, content) {
     if (content == null) {
       content = [];

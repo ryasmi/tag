@@ -1,40 +1,44 @@
 ((scope, document, Object, Array) ->
-  tag = (->
-    # Creates an alias.
-    aliasFn = (alias) -> (element, value) ->
-      element[alias] = value
+  # Creates an alias.
+  aliasFn = (alias) -> (element, value) ->
+    element[alias] = value
 
-    # Defines aliases for element attributes.
-    alias =
-      'class': aliasFn('className')
-      'tag-show': (element, value) ->
-        (element.style = element.style or {}).display = value
+  # Defines aliases for element attributes.
+  alias =
+    'class': aliasFn('className')
+    'tag-show': (element, value) ->
+      (element.style = element.style or {}).display = value
 
-    # Calls a list of callbacks.
-    callList = (list) -> (args...) ->
-      list.map((callback) -> callback(args...))
+  # Calls a list of callbacks.
+  callList = (list) -> (args...) ->
+    list.map((callback) -> callback(args...))
 
-    # Creates a tag.
-    (tagName) ->
-      # Creates an element.
-      tag[tagName] = (options = {}, content = []) ->
-        element = document.createElement(tagName)
+  # Creates a tag.
+  tag = (tagName) ->
+    # Creates an element.
+    tag[tagName] = (options = {}, content = []) ->
+      # Sets up options and content.
+      if options? and (typeof options isnt 'object' or Array.isArray(options))
+        content = options or []
+        options = {}
 
-        # Sets options on the element.
-        Object.keys(options).forEach((option) ->
-          setKey = alias[option] or aliasFn(option)
+      content = if Array.isArray(content) then content else [content]
 
-          # Creates a callback function if an array of callbacks are provided for an event.
-          cbArray = option.indexOf('on') is 0 and options[option].constructor is Array
-          setKey(element, if cbArray then callList(options[option]) else options[option])
-        )
+      element = document.createElement(tagName)
 
-        # Adds content to the element.
-        tag.addContent(element, content.map((obj) ->
-          if obj.constructor isnt HTMLDivElement then document.createTextNode(obj)
-          else obj
-        ))
-  )()
+      # Sets options on the element.
+      Object.keys(options).forEach((option) ->
+        setKey = alias[option] or aliasFn(option)
+
+        # Creates a callback function if an array of callbacks are provided for an event.
+        cbArray = option.indexOf('on') is 0 and options[option].constructor is Array
+        setKey(element, if cbArray then callList(options[option]) else options[option])
+      )
+
+      # Adds content to the element.
+      tag.addContent(element, content.map((obj) ->
+        if typeof obj isnt 'object' then document.createTextNode(obj) else obj
+      ))
 
   # Adds content to an element.
   tag.addContent = (element, content = []) ->
