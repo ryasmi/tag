@@ -4,7 +4,8 @@
   "main": "build/tag.js",
   "moduleType": [
     "amd",
-    "commonjs"
+    "node",
+    "globals"
   ],
   "license": "Creative Commons",
   "ignore": ["./!(build)"]
