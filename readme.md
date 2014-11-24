@@ -9,7 +9,7 @@
 If you have a bug, enhancement, or question you can post it in the issues, however, please see the [contribution guidelines](/contributing.md) before doing so. You may also ask questions and chat on [Gitter](https://gitter.im/ryansmith94/tag).
 
 ## Users
-Documentation can be found in the [docs](/docs) directory. Please see below for instructions on how to [download](#download) and [use](#use) tag.
+Documentation can be found in the [docs](/docs) directory. Please see below for instructions on how to [download](#download) and [use](#use) tag. There is also a [Plunk](http://plnkr.co/edit/moSHBq) that you can check out to see an example of Tag in use.
 
 ### Download
 Please follow any of the instructions below to download tag.
