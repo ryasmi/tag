@@ -15,7 +15,7 @@ Documentation can be found in the [docs](/docs) directory. Please see below for 
 Please follow any of the instructions below to download tag.
 - [Bower](bower.io): run `bower install tag`.
 - [NPM](npmjs.org): run `npm install tag`.
-- [Git](http://git-scm.com/): `git clone https://github.com/ryansmith94/tag.git tag`.
+- [Git](http://git-scm.com/): run `git clone https://github.com/ryansmith94/tag.git tag`.
 - [Download](https://github.com/ryansmith94/tag/archive/develop.zip): `https://github.com/ryansmith94/tag/archive/develop.zip`.
 
 ### Use
@@ -43,4 +43,4 @@ You may contribute to this project via issues and pull requests, however, please
 - [docs](/docs) - Documentation written in GitHub Markdown.
 
 ### Build Process
-You should try to ensure that [`gulp` or `npm test`](http://gulpjs.com/) run without any errors before submitting a pull request.
+You should try to ensure that `npm test` or [`gulp`](http://gulpjs.com/) run without any errors before submitting a pull request.
