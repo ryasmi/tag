@@ -9,7 +9,7 @@
 If you have a bug, enhancement, or question you can post it in the issues, however, please see the [contribution guidelines](/contributing.md) before doing so. You may also ask questions and chat on [Gitter](https://gitter.im/ryansmith94/tag).
 
 ## Users
-Documentation can be found in the [docs](/docs) directory. Please see below for instructions on how to [download](#download) and [use](#use) tag. There is also a [Plunk](http://plnkr.co/edit/moSHBq) that you can check out to see an example of Tag in use.
+Documentation can be found in the [docs](/docs) directory. Please see below for instructions on how to [download](#download) and [use](#use) tag. There are also a few [Plunks](#plunks) that demonstrate how to use Tag below.
 
 ### Download
 Please follow any of the instructions below to download tag.
@@ -22,6 +22,10 @@ Please follow any of the instructions below to download tag.
 - [CommonJS](http://wiki.commonjs.org/wiki/CommonJS): `var tag = require('tag');`.
 - [AMD](http://requirejs.org/docs/whyamd.html): `require(['tag'], function (tag) {})`.
 - [Global](http://www.w3schools.com/js/js_scope.asp): `var tag = window.tag;`.
+
+### Plunks
+- [Todos](http://plnkr.co/edit/moSHBq)
+- [Hackity Hack](http://plnkr.co/edit/slmRLT)
 
 ## Developers
 You may contribute to this project via issues and pull requests, however, please see the [contribution guidelines](/contributing.md) before doing so.
