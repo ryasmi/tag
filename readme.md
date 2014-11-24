@@ -24,8 +24,8 @@ Please follow any of the instructions below to download tag.
 - [Global](http://www.w3schools.com/js/js_scope.asp): `var tag = window.tag;`.
 
 ### Plunks
-- [Todos](http://plnkr.co/edit/moSHBq)
-- [Hackity Hack](http://plnkr.co/edit/slmRLT)
+- [Todos](http://plnkr.co/edit/moSHBq?p=preview)
+- [Hackity Hack](http://plnkr.co/edit/slmRLT?p=preview)
 
 ## Developers
 You may contribute to this project via issues and pull requests, however, please see the [contribution guidelines](/contributing.md) before doing so.
