@@ -25,7 +25,8 @@ Please follow any of the instructions below to download tag.
 
 ### Plunks
 - [Todos](http://plnkr.co/edit/64UBfP?p=preview)
-- [Hackity Hack](http://plnkr.co/edit/slmRLT?p=preview)
+- [Image loading view](http://plnkr.co/edit/sJgFBu8lqwQLeIG6x08M?p=preview)
+- [Hackity hack](http://plnkr.co/edit/slmRLT?p=preview)
 
 ## Developers
 You may contribute to this project via issues and pull requests, however, please see the [contribution guidelines](/contributing.md) before doing so.
