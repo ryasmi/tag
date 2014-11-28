@@ -25,7 +25,7 @@ Please follow any of the instructions below to download tag.
 
 ### Plunks
 - [Todos](http://plnkr.co/edit/64UBfP?p=preview)
-- [Image loading view](http://plnkr.co/edit/sJgFBu8lqwQLeIG6x08M?p=preview)
+- [Image loading view](http://plnkr.co/edit/4X4N5E?p=preview)
 - [Hackity hack](http://plnkr.co/edit/slmRLT?p=preview)
 
 ## Developers
