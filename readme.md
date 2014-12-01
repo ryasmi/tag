@@ -1,12 +1,10 @@
 # Tag
-> A [micro JavaScript library](http://microjs.com/#) for creating elements, inspired by [Laconic](https://github.com/joestelmach/laconic) and [React](facebook.github.io/react/).
+> A [micro JavaScript library](http://microjs.com/#) for creating elements, inspired by [Laconic](https://github.com/joestelmach/laconic) and [React](facebook.github.io/react/). Tag removes the overhead of existing templates (in regards to speed and size) whilst adding minimal sugar to the existing Document API in a trivial fashion. [Read more...](https://medium.com/@ryansmith/javascript-templates-8e1be6bf2628)
 
 [![Build Status](https://travis-ci.org/ryansmith94/tag.svg?branch=master)](https://travis-ci.org/ryansmith94/tag)
 [![Dependencies](https://david-dm.org/ryansmith94/tag.svg?style=flat)](/package.json)
 [![Dev Dependencies](https://david-dm.org/ryansmith94/tag/dev-status.svg?style=flat)](/package.json)
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ryansmith94/tag?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-Tag removes the overhead of existing templates (in regards to speed and size) whilst adding minimal sugar to the existing Document API in a trivial fashion. [Read more...](https://medium.com/@ryansmith/javascript-templates-8e1be6bf2628)
 
 If you have a bug, enhancement, or question you can post it in the issues, however, please see the [contribution guidelines](/contributing.md) before doing so. You may also ask questions and chat on [Gitter](https://gitter.im/ryansmith94/tag).
 
