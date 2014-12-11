@@ -22,7 +22,11 @@
 
         # Creates a callback function if an array of callbacks are provided for an event.
         cbArray = option.indexOf('on') is 0 and options[option].constructor is Array
-        setKey(element, if cbArray then callList(options[option]) else options[option])
+        setKey(element, if cbArray then callList(options[option]) else options[option], {
+          options: options,
+          content: content,
+          tagName: tagName
+        })
       )
 
       # Adds content to the element.
