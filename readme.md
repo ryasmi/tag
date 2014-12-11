@@ -13,8 +13,8 @@ Documentation can be found in the [docs](/docs) directory. Please see below for 
 
 ### Download
 Please follow any of the instructions below to download tag.
-- [Bower](bower.io): run `bower install tag`.
-- [NPM](npmjs.org): run `npm install tag`.
+- [Bower](bower.io): run `bower install bower-tag`.
+- [NPM](npmjs.org): run `npm install npm-tag`.
 - [Git](http://git-scm.com/): run `git clone https://github.com/ryansmith94/tag.git tag`.
 - [Download](https://github.com/ryansmith94/tag/archive/develop.zip): `https://github.com/ryansmith94/tag/archive/develop.zip`.
 
