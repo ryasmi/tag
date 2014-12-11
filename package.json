@@ -12,7 +12,7 @@
   },
   "name": "npm-tag",
   "description": "A micro JavaScript library for creating elements, inspired by Laconic and React.",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "build/tag.js",
   "directories": {
     "doc": "docs"
