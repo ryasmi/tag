@@ -11,7 +11,7 @@
     "gulp-sourcemaps": "^1.2.1"
   },
   "name": "npm-tag",
-  "description": "> A [micro JavaScript library](http://microjs.com/#) for creating elements, inspired by [Laconic](https://github.com/joestelmach/laconic) and [React](facebook.github.io/react/). Tag removes the overhead of existing templates (in regards to speed and size) whilst adding minimal sugar to the existing Document API in a trivial fashion. [Read more...](https://medium.com/@ryansmith/javascript-templates-8e1be6bf2628)",
+  "description": "A micro JavaScript library for creating elements, inspired by Laconic and React.",
   "version": "0.0.0",
   "main": "build/tag.js",
   "directories": {
@@ -33,5 +33,6 @@
   "bugs": {
     "url": "https://github.com/ryansmith94/tag/issues"
   },
-  "homepage": "https://github.com/ryansmith94/tag"
+  "homepage": "https://github.com/ryansmith94/tag",
+  "keywords": ["templates", "elements"]
 }
