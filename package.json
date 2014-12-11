@@ -9,5 +9,29 @@
     "gulp-coffeelint": "^0.3.4",
     "gulp-jasmine": "^1.0.0",
     "gulp-sourcemaps": "^1.2.1"
-  }
+  },
+  "name": "npm-tag",
+  "description": "> A [micro JavaScript library](http://microjs.com/#) for creating elements, inspired by [Laconic](https://github.com/joestelmach/laconic) and [React](facebook.github.io/react/). Tag removes the overhead of existing templates (in regards to speed and size) whilst adding minimal sugar to the existing Document API in a trivial fashion. [Read more...](https://medium.com/@ryansmith/javascript-templates-8e1be6bf2628)",
+  "version": "0.0.0",
+  "main": "build/tag.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-coffeelint": "^0.3.4",
+    "gulp-coffee": "^2.2.0",
+    "gulp-jasmine": "^1.0.1",
+    "gulp-sourcemaps": "^1.2.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryansmith94/tag.git"
+  },
+  "author": "Ryan Smith",
+  "license": "CC-BY-NC-SA",
+  "bugs": {
+    "url": "https://github.com/ryansmith94/tag/issues"
+  },
+  "homepage": "https://github.com/ryansmith94/tag"
 }

@@ -1,12 +1,23 @@
 {
-  "name": "tag",
+  "name": "bower-tag",
   "homepage": "https://github.com/ryansmith94/tag",
   "main": "build/tag.js",
   "moduleType": [
     "amd",
-    "node",
-    "globals"
+    "globals",
+    "node"
   ],
   "license": "Creative Commons",
-  "ignore": ["./!(build)"]
+  "ignore": [
+    "./!(build)",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "version": "0.0.0",
+  "authors": [
+    "Ryan Smith <0ryansmith1994@gmail.com>"
+  ]
 }
