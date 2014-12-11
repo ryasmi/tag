@@ -1,14 +1,4 @@
 ((scope, document, Object, Array) ->
-  # Creates an alias.
-  aliasFn = (alias) -> (element, value) ->
-    element[alias] = value
-
-  # Defines aliases for element attributes.
-  alias =
-    'class': aliasFn('className')
-    'tag-show': (element, value) ->
-      (element.style = element.style or {}).display = value
-
   # Calls a list of callbacks.
   callList = (list) -> (args...) ->
     list.map((callback) -> callback(args...))
@@ -28,7 +18,7 @@
 
       # Sets options on the element.
       Object.keys(options).forEach((option) ->
-        setKey = alias[option] or aliasFn(option)
+        setKey = tag.aliases[option] or tag.alias(option)
 
         # Creates a callback function if an array of callbacks are provided for an event.
         cbArray = option.indexOf('on') is 0 and options[option].constructor is Array
@@ -39,6 +29,16 @@
       tag.addContent(element, content.map((obj) ->
         if typeof obj isnt 'object' then document.createTextNode(obj) else obj
       ))
+
+  # Creates an alias.
+  tag.alias = (alias) -> (element, value) ->
+    element[alias] = value
+
+  # Defines aliases for element attributes.
+  tag.aliases =
+    'class': tag.alias('className')
+    'tag-show': (element, value) ->
+      (element.style = element.style or {}).display = value
 
   # Adds content to an element.
   tag.addContent = (element, content = []) ->
@@ -59,6 +59,6 @@
 
   # Exposes tag via CommonJS, AMD, or a Global.
   if typeof scope.define is 'function'
-      scope.define('tag', [], () -> tag)
+    scope.define('tag', [], () -> tag)
   else scope.tag = tag
 )(this, document, Object, Array)

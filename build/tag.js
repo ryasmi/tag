@@ -1,18 +1,7 @@
 var __slice = [].slice;
 
 (function(scope, document, Object, Array) {
-  var alias, aliasFn, callList, tag;
-  aliasFn = function(alias) {
-    return function(element, value) {
-      return element[alias] = value;
-    };
-  };
-  alias = {
-    'class': aliasFn('className'),
-    'tag-show': function(element, value) {
-      return (element.style = element.style || {}).display = value;
-    }
-  };
+  var callList, tag;
   callList = function(list) {
     return function() {
       var args;
@@ -39,7 +28,7 @@ var __slice = [].slice;
       element = document.createElement(tagName);
       Object.keys(options).forEach(function(option) {
         var cbArray, setKey;
-        setKey = alias[option] || aliasFn(option);
+        setKey = tag.aliases[option] || tag.alias(option);
         cbArray = option.indexOf('on') === 0 && options[option].constructor === Array;
         return setKey(element, cbArray ? callList(options[option]) : options[option]);
       });
@@ -51,6 +40,17 @@ var __slice = [].slice;
         }
       }));
     };
+  };
+  tag.alias = function(alias) {
+    return function(element, value) {
+      return element[alias] = value;
+    };
+  };
+  tag.aliases = {
+    'class': tag.alias('className'),
+    'tag-show': function(element, value) {
+      return (element.style = element.style || {}).display = value;
+    }
   };
   tag.addContent = function(element, content) {
     if (content == null) {
